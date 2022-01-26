@@ -12,5 +12,11 @@
             label="reset"
             onclick={reset}>
         </lightning-button>
+
+        <template if:true={accounts.data}>
+            <template for:each={accounts.data} for:item="account">
+                <p key={account.id}> { account.Name } </p>
+            </template>
+        </template>
     </lightning-card>
 </template>
